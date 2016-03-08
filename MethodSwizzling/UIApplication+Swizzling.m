@@ -16,7 +16,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
 
-        [UIApplication swizzlingOriginalSelector:@selector(sendAction:to:from:forEvent:) swizzledSelector:@selector(gm_sendAction:to:from:forEvent:)];
+//        [UIApplication swizzlingOriginalSelector:@selector(sendAction:to:from:forEvent:) swizzledSelector:@selector(gm_sendAction:to:from:forEvent:)];
 //        [UIApplication swizzlingOriginalSelector:@selector(sendEvent:) swizzledSelector:@selector(gm_sendEvent:)];
 
     });
