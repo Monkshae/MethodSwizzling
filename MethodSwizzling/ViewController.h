@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController<UIGestureRecognizerDelegate,UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic, strong) NSString * pageName;
+@property (nonatomic, strong) NSString * businessId;
 
 @end
 
