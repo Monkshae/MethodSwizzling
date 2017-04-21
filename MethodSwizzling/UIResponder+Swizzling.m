@@ -12,14 +12,14 @@
 @implementation UIResponder (Swizzling)
 
 
-+ (void)load {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        
-        [UIResponder swizzlingOriginalSelector:@selector(touchesEnded:withEvent:) swizzledSelector:@selector(gm_touchesEnded:withEvent:)];
-        
-    });
-}
+//+ (void)load {
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        
+//        [UIResponder swizzlingOriginalSelector:@selector(touchesEnded:withEvent:) swizzledSelector:@selector(gm_touchesEnded:withEvent:)];
+//        
+//    });
+//}
 
 
 + (void)swizzlingOriginalSelector:(SEL)origSelector swizzledSelector:(SEL)swizzledSelector

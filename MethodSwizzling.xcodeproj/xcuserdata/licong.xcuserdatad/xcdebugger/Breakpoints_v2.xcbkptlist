@@ -16,7 +16,7 @@
             startingLineNumber = "31"
             endingLineNumber = "31"
             landmarkName = "-viewWillAppear:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -106,6 +106,22 @@
             startingLineNumber = "51"
             endingLineNumber = "51"
             landmarkName = "-gm_setDelegate:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MethodSwizzling/UIWindow+Swizzling.m"
+            timestampString = "514456800.845649"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "-gm_sendGesturesForEvent:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
