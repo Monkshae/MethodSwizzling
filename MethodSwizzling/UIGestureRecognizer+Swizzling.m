@@ -14,14 +14,14 @@
 @implementation UIGestureRecognizer (Swizzling)
 
 
-+ (void)load {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        
+//+ (void)load {
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        
 //        [UIGestureRecognizer swizzlingOriginalSelector:@selector(setDelegate:) swizzledSelector:@selector(gm_setDelegate:)];
-        
-    });
-}
+//        
+//    });
+//}
 
 
 + (void)swizzlingOriginalSelector:(SEL)origSelector swizzledSelector:(SEL)swizzledSelector

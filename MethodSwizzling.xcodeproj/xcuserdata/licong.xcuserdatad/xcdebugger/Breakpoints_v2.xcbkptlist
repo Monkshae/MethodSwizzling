@@ -25,22 +25,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MethodSwizzling/UIControl+Swizzling.m"
-            timestampString = "478680619.054955"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "-gm_sendAction:to:forEvent:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "MethodSwizzling/ViewController.m"
             timestampString = "478754659.980948"
             startingColumnNumber = "9223372036854775807"
@@ -48,39 +32,7 @@
             startingLineNumber = "111"
             endingLineNumber = "111"
             landmarkName = "-tapAction:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MethodSwizzling/UIGestureRecognizer+Swizzling.m"
-            timestampString = "478757812.249963"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "+swizzlingOriginalSelector:swizzledSelector:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MethodSwizzling/UIGestureRecognizer+Swizzling.m"
-            timestampString = "478765623.052681"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "-gm_setDelegate:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -99,13 +51,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MethodSwizzling/UIGestureRecognizer+Swizzling.m"
-            timestampString = "478765655.515491"
+            filePath = "MethodSwizzling/MainViewController.m"
+            timestampString = "514456585.304281"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "gm_gestureRecognizerShouldBegin()"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -115,30 +67,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MethodSwizzling/UIApplication+Swizzling.m"
-            timestampString = "479112279.388275"
+            filePath = "MethodSwizzling/MainViewController.m"
+            timestampString = "514456591.234438"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "-gm_sendAction:to:from:forEvent:"
-            landmarkType = "5">
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MethodSwizzling/UIResponder+Swizzling.m"
-            timestampString = "479112393.824715"
+            filePath = "MethodSwizzling/UITableView+Swizzling.m"
+            timestampString = "514456660.363822"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "-gm_touchesEnded:withEvent:"
-            landmarkType = "5">
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "gm_didSelectRowAtIndexPath()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MethodSwizzling/UITableView+Swizzling.m"
+            timestampString = "514456672.53987"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "-gm_setDelegate:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

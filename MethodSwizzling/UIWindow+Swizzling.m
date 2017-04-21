@@ -35,18 +35,16 @@
 //}
 
 
-+ (void)load {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        
+//+ (void)load {
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        
 //        [UIWindow swizzlingOriginalSelector:@selector(_sendGesturesForEvent:) swizzledSelector:@selector(gm_sendGesturesForEvent:)];
-        
+//        
 //        [UIWindow swizzlingOriginalSelector:@selector(sendAction:to:from:forEvent:) swizzledSelector:@selector(gm_sendAction:to:from:forEvent:)];
-
-        
-        
-    });
-}
+//        
+//    });
+//}
 
 
 + (void)swizzlingOriginalSelector:(SEL)origSelector swizzledSelector:(SEL)swizzledSelector

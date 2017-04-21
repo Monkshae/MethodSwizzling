@@ -17,6 +17,7 @@
 		D93ECEE81C881AC100663946 /* UITableView+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = D93ECEE71C881AC100663946 /* UITableView+Swizzling.m */; };
 		D93ECEF31C89340000663946 /* JPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = D93ECEF11C89340000663946 /* JPEngine.m */; };
 		D93ECEF41C89340000663946 /* JSPatch.js in Resources */ = {isa = PBXBuildFile; fileRef = D93ECEF21C89340000663946 /* JSPatch.js */; };
+		D9A79B711EA9F9E7008F38E0 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A79B701EA9F9E7008F38E0 /* MainViewController.m */; };
 		D9CB58BE1C7D9464004FBD98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CB58BD1C7D9464004FBD98 /* main.m */; };
 		D9CB58C11C7D9464004FBD98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CB58C01C7D9464004FBD98 /* AppDelegate.m */; };
 		D9CB58C41C7D9464004FBD98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CB58C31C7D9464004FBD98 /* ViewController.m */; };
@@ -45,6 +46,8 @@
 		D93ECEF01C89340000663946 /* JPEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPEngine.h; sourceTree = "<group>"; };
 		D93ECEF11C89340000663946 /* JPEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPEngine.m; sourceTree = "<group>"; };
 		D93ECEF21C89340000663946 /* JSPatch.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = JSPatch.js; sourceTree = "<group>"; };
+		D9A79B6F1EA9F9E7008F38E0 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		D9A79B701EA9F9E7008F38E0 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		D9CB58B91C7D9464004FBD98 /* MethodSwizzling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MethodSwizzling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9CB58BD1C7D9464004FBD98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D9CB58BF1C7D9464004FBD98 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -100,6 +103,8 @@
 			children = (
 				D9CB58BF1C7D9464004FBD98 /* AppDelegate.h */,
 				D9CB58C01C7D9464004FBD98 /* AppDelegate.m */,
+				D9A79B6F1EA9F9E7008F38E0 /* MainViewController.h */,
+				D9A79B701EA9F9E7008F38E0 /* MainViewController.m */,
 				D9CB58C21C7D9464004FBD98 /* ViewController.h */,
 				D9CB58C31C7D9464004FBD98 /* ViewController.m */,
 				D9CB58D91C7DC273004FBD98 /* SecondViewController.h */,
@@ -218,6 +223,7 @@
 				D93ECED91C88148300663946 /* UIControl+Swizzling.m in Sources */,
 				D93ECEC71C86A99600663946 /* UIWindow+Swizzling.m in Sources */,
 				D93ECEE81C881AC100663946 /* UITableView+Swizzling.m in Sources */,
+				D9A79B711EA9F9E7008F38E0 /* MainViewController.m in Sources */,
 				D9CB58C11C7D9464004FBD98 /* AppDelegate.m in Sources */,
 				D9CB58BE1C7D9464004FBD98 /* main.m in Sources */,
 			);
