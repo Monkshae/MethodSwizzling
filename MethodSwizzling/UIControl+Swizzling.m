@@ -8,18 +8,18 @@
 
 #import "UIControl+Swizzling.h"
 #import "objc/runtime.h"
-#import "ViewController.h"
+#import "ButtonSwizzlingController.h"
 @implementation UIControl (Swizzling)
 
 
-//+ (void)load {
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-//        
-//        [UIControl swizzlingOriginalSelector:@selector(sendAction:to:forEvent:) swizzledSelector:@selector(gm_sendAction:to:forEvent:)];
-//        
-//    });
-//}
++ (void)load {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        
+        [UIControl swizzlingOriginalSelector:@selector(sendAction:to:forEvent:) swizzledSelector:@selector(gm_sendAction:to:forEvent:)];
+        
+    });
+}
 
 
 + (void)swizzlingOriginalSelector:(SEL)origSelector swizzledSelector:(SEL)swizzledSelector
@@ -48,8 +48,8 @@
 
 - (BOOL)gm_sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event {
     NSString *selectorName = NSStringFromSelector(action);
-        ViewController *controller = (ViewController *)target;
-        NSLog(@"action %s occurred.\n page name : %@, businessId : %@", [selectorName UTF8String], controller.pageName, controller.businessId);
+    ButtonSwizzlingController *controller = (ButtonSwizzlingController *)target;
+    NSLog(@"action %s occurred.\n page name : %@, businessId : %@", [selectorName UTF8String], controller.pageName, controller.businessId);
     return [self gm_sendAction:action to:target  forEvent:event];
 }
 

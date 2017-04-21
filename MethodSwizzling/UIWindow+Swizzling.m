@@ -8,7 +8,7 @@
 
 #import "UIWindow+Swizzling.h"
 #import "objc/runtime.h"
-#import "ViewController.h"
+#import "ButtonSwizzlingController.h"
 
 @implementation UIWindow (Swizzling)
 
@@ -121,7 +121,7 @@
 //- (BOOL)gm_sendAction:(SEL)action to:(id)target from:(id)sender forEvent:(UIEvent *)event {
 //    NSString *selectorName = NSStringFromSelector(action);
 //    if (/*![selectorName isEqualToString:@"_sendAction:withEvent:"] && */[sender accessibilityIdentifier]) {
-//        ViewController *controller = (ViewController *)target;
+//        ButtonSwizzlingController *controller = (ButtonSwizzlingController *)target;
 //        NSLog(@"action %s occurred.\n page name : %@, businessId : %@, aid : %@", [selectorName UTF8String], controller.pageName, controller.businessId, [sender accessibilityIdentifier]);
 //    }
 //    return [self gm_sendAction:action to:target from:sender forEvent:event];

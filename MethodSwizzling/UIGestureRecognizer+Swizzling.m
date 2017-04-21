@@ -9,7 +9,7 @@
 #import "UIGestureRecognizer+Swizzling.h"
 #import "objc/runtime.h"
 #import "objc/message.h"
-#import "ViewController.h"
+#import "ButtonSwizzlingController.h"
 
 @implementation UIGestureRecognizer (Swizzling)
 

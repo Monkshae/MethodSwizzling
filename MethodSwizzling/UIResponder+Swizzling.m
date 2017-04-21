@@ -8,7 +8,7 @@
 
 #import "UIResponder+Swizzling.h"
 #import "objc/runtime.h"
-#import "ViewController.h"
+#import "ButtonSwizzlingController.h"
 @implementation UIResponder (Swizzling)
 
 

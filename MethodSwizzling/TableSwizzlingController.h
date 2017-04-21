@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ViewController.h"
+#import "ButtonSwizzlingController.h"
 
-@interface FourViewController : UIViewController
+@interface TableSwizzlingController : UIViewController
 
 @end

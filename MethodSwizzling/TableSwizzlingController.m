@@ -6,14 +6,14 @@
 //  Copyright © 2016年 Sean Lee. All rights reserved.
 //
 
-#import "FourViewController.h"
+#import "TableSwizzlingController.h"
 #import "objc/runtime.h"
 #import "SecondViewController.h"
-@interface FourViewController  ()<UITableViewDataSource,UITableViewDelegate>
+@interface TableSwizzlingController  ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
 
-@implementation FourViewController
+@implementation TableSwizzlingController
 
 - (void)viewDidLoad{
     [super viewDidLoad];
@@ -43,7 +43,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"didSelected");
-    
     SecondViewController *controler = [[SecondViewController alloc]init];
     [self.navigationController pushViewController:controler animated:YES];
 }

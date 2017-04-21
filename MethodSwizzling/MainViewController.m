@@ -7,7 +7,9 @@
 //
 
 #import "MainViewController.h"
-#import "FourViewController.h"
+#import "TableSwizzlingController.h"
+#import "FrameController.h"
+
 @interface MainViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) NSArray * dataArray;
 @end
@@ -26,8 +28,9 @@
     tableView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
     [self.view addSubview:tableView];
     
-    _dataArray = @[@"TableSwizzling",@"TapSwizzling"];
+    _dataArray = @[@"TableSwizzling",@"ButtonSwizzling",@"ViewSwizzling"];
     
+    //@"TapSwizzling"
     
 }
 
@@ -48,11 +51,13 @@
     UIViewController * controler = nil;
     switch (indexPath.row) {
         case 0:
-            controler = [[FourViewController alloc]init];
+            controler = [[TableSwizzlingController alloc]init];
             break;
         case 1:
+            controler = [[ButtonSwizzlingController alloc]init];
             break;
         default:
+            controler = [[FrameController alloc]init];
             break;
     }
     [self.navigationController pushViewController:controler animated:YES];

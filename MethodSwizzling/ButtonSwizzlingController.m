@@ -1,25 +1,23 @@
 //
-//  ViewController.m
+//  ButtonSwizzlingController.m
 //  MethodSwizzling
 //
 //  Created by licong on 16/2/24.
 //  Copyright © 2016年 Sean Lee. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ButtonSwizzlingController.h"
 #import "objc/runtime.h"
 #import "SecondViewController.h"
 #import "ThirdViewController.h"
-#import "FourViewController.h"
-//#import "UIApplication+Swizzling.h"
-//#import "UIWindow+Swizzling.h"
-//#import "UIGestureRecognizer+Swizzling.h"
+#import "TableSwizzlingController.h"
+#import "UIControl+Swizzling.h"
 
-@interface ViewController ()
+@interface ButtonSwizzlingController ()
 
 @end
 
-@implementation ViewController
+@implementation ButtonSwizzlingController
 
 
 //+ (void)load{
@@ -44,7 +42,7 @@
     
     self.view.accessibilityIdentifier = @"KeyView";
     self.businessId = @"ViewControllerId";
-    self.pageName = NSStringFromClass([ViewController class]);
+    self.pageName = NSStringFromClass([ButtonSwizzlingController class]);
     // Do any additional setup after loading the view, typically from a nib.
     
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -61,7 +59,6 @@
     
     
     
-    
     UILabel *label = [[UILabel alloc]init];;
     label.text = @"哈哈";
     label.userInteractionEnabled  = YES;
@@ -72,9 +69,9 @@
     
     
     
-    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
-    gesture.delegate = self;
-    [self.view addGestureRecognizer:gesture];
+//    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
+//    gesture.delegate = self;
+//    [self.view addGestureRecognizer:gesture];
     
  
     
@@ -100,21 +97,21 @@
 
 - (void)buttonClicked:(UIButton *)button{
     
-    FourViewController *controler = [[FourViewController alloc]init];
+    TableSwizzlingController *controler = [[TableSwizzlingController alloc]init];
     [self.navigationController pushViewController:controler animated:YES];
     
 }
 
 
-- (void)tapAction:(UITapGestureRecognizer *)gesture{
-    
-    NSLog(@"tap");
-//    [self phobosDataWithPageName:@"大大" pageId:@"2131" referer:@"aasda"];
-}
-
-
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
-    return YES;
-}
+//- (void)tapAction:(UITapGestureRecognizer *)gesture{
+//    
+//    NSLog(@"tap");
+////    [self phobosDataWithPageName:@"大大" pageId:@"2131" referer:@"aasda"];
+//}
+//
+//
+//- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
+//    return YES;
+//}
 
 @end

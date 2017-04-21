@@ -18,7 +18,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-//        [UITableView swizzlingOriginalSelector:@selector(setDelegate:) swizzledSelector:@selector(gm_setDelegate:)];
+        [UITableView swizzlingOriginalSelector:@selector(setDelegate:) swizzledSelector:@selector(gm_setDelegate:)];
         
     });
 }
@@ -63,7 +63,6 @@
             method_exchangeImplementations(originalMethod, swizzledMethod);
             
         }else{
-            
         }
     }
 }
@@ -73,6 +72,7 @@ void gm_didSelectRowAtIndexPath(id self  ,SEL _cmd ,id tableView, id indexPath) 
     SEL selector = NSSelectorFromString(@"gm_didSelectRowAtIndexPath");
     ((void (*)(id,SEL,id,id))objc_msgSend)(self,selector,tableView,indexPath);
     NSLog(@"gm_didselected");
+    
 }
 
 

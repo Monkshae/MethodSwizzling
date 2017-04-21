@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D93ECEB51C85756500663946 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D93ECEB41C85756500663946 /* ThirdViewController.m */; };
-		D93ECEB81C8579C000663946 /* FourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D93ECEB71C8579C000663946 /* FourViewController.m */; };
+		D93ECEB81C8579C000663946 /* TableSwizzlingController.m in Sources */ = {isa = PBXBuildFile; fileRef = D93ECEB71C8579C000663946 /* TableSwizzlingController.m */; };
 		D93ECEC11C85AE2100663946 /* UIApplication+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = D93ECEC01C85AE2100663946 /* UIApplication+Swizzling.m */; };
 		D93ECEC41C8690AD00663946 /* UIGestureRecognizer+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = D93ECEC31C8690AD00663946 /* UIGestureRecognizer+Swizzling.m */; };
 		D93ECEC71C86A99600663946 /* UIWindow+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = D93ECEC61C86A99600663946 /* UIWindow+Swizzling.m */; };
@@ -18,9 +18,11 @@
 		D93ECEF31C89340000663946 /* JPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = D93ECEF11C89340000663946 /* JPEngine.m */; };
 		D93ECEF41C89340000663946 /* JSPatch.js in Resources */ = {isa = PBXBuildFile; fileRef = D93ECEF21C89340000663946 /* JSPatch.js */; };
 		D9A79B711EA9F9E7008F38E0 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A79B701EA9F9E7008F38E0 /* MainViewController.m */; };
+		D9A79B741EAA16F5008F38E0 /* UIView+MyViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A79B731EAA16F5008F38E0 /* UIView+MyViewAdditions.m */; };
+		D9A79B771EAA2F7C008F38E0 /* FrameController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A79B761EAA2F7C008F38E0 /* FrameController.m */; };
 		D9CB58BE1C7D9464004FBD98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CB58BD1C7D9464004FBD98 /* main.m */; };
 		D9CB58C11C7D9464004FBD98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CB58C01C7D9464004FBD98 /* AppDelegate.m */; };
-		D9CB58C41C7D9464004FBD98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CB58C31C7D9464004FBD98 /* ViewController.m */; };
+		D9CB58C41C7D9464004FBD98 /* ButtonSwizzlingController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CB58C31C7D9464004FBD98 /* ButtonSwizzlingController.m */; };
 		D9CB58C91C7D9464004FBD98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9CB58C81C7D9464004FBD98 /* Assets.xcassets */; };
 		D9CB58CC1C7D9464004FBD98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9CB58CA1C7D9464004FBD98 /* LaunchScreen.storyboard */; };
 		D9CB58DB1C7DC273004FBD98 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CB58DA1C7DC273004FBD98 /* SecondViewController.m */; };
@@ -29,8 +31,8 @@
 /* Begin PBXFileReference section */
 		D93ECEB31C85756500663946 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		D93ECEB41C85756500663946 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
-		D93ECEB61C8579C000663946 /* FourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourViewController.h; sourceTree = "<group>"; };
-		D93ECEB71C8579C000663946 /* FourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourViewController.m; sourceTree = "<group>"; };
+		D93ECEB61C8579C000663946 /* TableSwizzlingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableSwizzlingController.h; sourceTree = "<group>"; };
+		D93ECEB71C8579C000663946 /* TableSwizzlingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableSwizzlingController.m; sourceTree = "<group>"; };
 		D93ECEBF1C85AE2100663946 /* UIApplication+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Swizzling.h"; sourceTree = "<group>"; };
 		D93ECEC01C85AE2100663946 /* UIApplication+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Swizzling.m"; sourceTree = "<group>"; };
 		D93ECEC21C8690AD00663946 /* UIGestureRecognizer+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+Swizzling.h"; sourceTree = "<group>"; };
@@ -48,12 +50,16 @@
 		D93ECEF21C89340000663946 /* JSPatch.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = JSPatch.js; sourceTree = "<group>"; };
 		D9A79B6F1EA9F9E7008F38E0 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		D9A79B701EA9F9E7008F38E0 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		D9A79B721EAA16F5008F38E0 /* UIView+MyViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MyViewAdditions.h"; sourceTree = "<group>"; };
+		D9A79B731EAA16F5008F38E0 /* UIView+MyViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MyViewAdditions.m"; sourceTree = "<group>"; };
+		D9A79B751EAA2F7C008F38E0 /* FrameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameController.h; sourceTree = "<group>"; };
+		D9A79B761EAA2F7C008F38E0 /* FrameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameController.m; sourceTree = "<group>"; };
 		D9CB58B91C7D9464004FBD98 /* MethodSwizzling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MethodSwizzling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9CB58BD1C7D9464004FBD98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D9CB58BF1C7D9464004FBD98 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D9CB58C01C7D9464004FBD98 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D9CB58C21C7D9464004FBD98 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D9CB58C31C7D9464004FBD98 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D9CB58C21C7D9464004FBD98 /* ButtonSwizzlingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonSwizzlingController.h; sourceTree = "<group>"; };
+		D9CB58C31C7D9464004FBD98 /* ButtonSwizzlingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtonSwizzlingController.m; sourceTree = "<group>"; };
 		D9CB58C81C7D9464004FBD98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9CB58CB1C7D9464004FBD98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9CB58CD1C7D9464004FBD98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,14 +111,16 @@
 				D9CB58C01C7D9464004FBD98 /* AppDelegate.m */,
 				D9A79B6F1EA9F9E7008F38E0 /* MainViewController.h */,
 				D9A79B701EA9F9E7008F38E0 /* MainViewController.m */,
-				D9CB58C21C7D9464004FBD98 /* ViewController.h */,
-				D9CB58C31C7D9464004FBD98 /* ViewController.m */,
+				D9CB58C21C7D9464004FBD98 /* ButtonSwizzlingController.h */,
+				D9CB58C31C7D9464004FBD98 /* ButtonSwizzlingController.m */,
 				D9CB58D91C7DC273004FBD98 /* SecondViewController.h */,
+				D9A79B751EAA2F7C008F38E0 /* FrameController.h */,
+				D9A79B761EAA2F7C008F38E0 /* FrameController.m */,
 				D9CB58DA1C7DC273004FBD98 /* SecondViewController.m */,
 				D93ECEB31C85756500663946 /* ThirdViewController.h */,
 				D93ECEB41C85756500663946 /* ThirdViewController.m */,
-				D93ECEB61C8579C000663946 /* FourViewController.h */,
-				D93ECEB71C8579C000663946 /* FourViewController.m */,
+				D93ECEB61C8579C000663946 /* TableSwizzlingController.h */,
+				D93ECEB71C8579C000663946 /* TableSwizzlingController.m */,
 				D93ECEBF1C85AE2100663946 /* UIApplication+Swizzling.h */,
 				D93ECEC01C85AE2100663946 /* UIApplication+Swizzling.m */,
 				D93ECEC81C86D11500663946 /* UIResponder+Swizzling.h */,
@@ -125,6 +133,8 @@
 				D93ECEC31C8690AD00663946 /* UIGestureRecognizer+Swizzling.m */,
 				D93ECEE61C881AC100663946 /* UITableView+Swizzling.h */,
 				D93ECEE71C881AC100663946 /* UITableView+Swizzling.m */,
+				D9A79B721EAA16F5008F38E0 /* UIView+MyViewAdditions.h */,
+				D9A79B731EAA16F5008F38E0 /* UIView+MyViewAdditions.m */,
 				D93ECEEF1C89340000663946 /* JSPatch */,
 				D9CB58C81C7D9464004FBD98 /* Assets.xcassets */,
 				D9CB58CA1C7D9464004FBD98 /* LaunchScreen.storyboard */,
@@ -213,18 +223,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				D93ECEC41C8690AD00663946 /* UIGestureRecognizer+Swizzling.m in Sources */,
-				D93ECEB81C8579C000663946 /* FourViewController.m in Sources */,
+				D93ECEB81C8579C000663946 /* TableSwizzlingController.m in Sources */,
 				D9CB58DB1C7DC273004FBD98 /* SecondViewController.m in Sources */,
 				D93ECECA1C86D11500663946 /* UIResponder+Swizzling.m in Sources */,
 				D93ECEF31C89340000663946 /* JPEngine.m in Sources */,
 				D93ECEC11C85AE2100663946 /* UIApplication+Swizzling.m in Sources */,
-				D9CB58C41C7D9464004FBD98 /* ViewController.m in Sources */,
+				D9CB58C41C7D9464004FBD98 /* ButtonSwizzlingController.m in Sources */,
 				D93ECEB51C85756500663946 /* ThirdViewController.m in Sources */,
 				D93ECED91C88148300663946 /* UIControl+Swizzling.m in Sources */,
 				D93ECEC71C86A99600663946 /* UIWindow+Swizzling.m in Sources */,
 				D93ECEE81C881AC100663946 /* UITableView+Swizzling.m in Sources */,
+				D9A79B771EAA2F7C008F38E0 /* FrameController.m in Sources */,
 				D9A79B711EA9F9E7008F38E0 /* MainViewController.m in Sources */,
 				D9CB58C11C7D9464004FBD98 /* AppDelegate.m in Sources */,
+				D9A79B741EAA16F5008F38E0 /* UIView+MyViewAdditions.m in Sources */,
 				D9CB58BE1C7D9464004FBD98 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

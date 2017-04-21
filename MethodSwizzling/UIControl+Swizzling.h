@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface UIControl (Swizzling)
-
+- (BOOL)gm_sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event;
 @end
