@@ -68,9 +68,6 @@
     
     
     
-//    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
-//    gesture.delegate = self;
-//    [self.view addGestureRecognizer:gesture];
     
  
     
@@ -102,15 +99,6 @@
 }
 
 
-//- (void)tapAction:(UITapGestureRecognizer *)gesture{
-//    
-//    NSLog(@"tap");
-////    [self phobosDataWithPageName:@"大大" pageId:@"2131" referer:@"aasda"];
-//}
-//
-//
-//- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
-//    return YES;
-//}
+
 
 @end

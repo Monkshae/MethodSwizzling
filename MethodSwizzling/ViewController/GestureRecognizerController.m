@@ -15,19 +15,17 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor purpleColor];
+    self.view.userInteractionEnabled = YES;
+    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
+    gesture.delegate = self;
+    [self.view addGestureRecognizer:gesture];
+
 }
 
 
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-//    NSLog(@"2 viewWillAppear");
+- (void)tapAction:(UITapGestureRecognizer *)gesture{
+    NSLog(@"tap");
 }
-
-//- (void)lc_viewWillAppear:(BOOL)animated{
-//    [self lc_viewWillAppear:animated];
-//    NSLog(@"2 lc_viewWillAppear -- 下面将是有关埋点的统计代码");
-//}
-
 
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{

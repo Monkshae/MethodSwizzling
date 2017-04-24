@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface GestureRecognizerController : BaseViewController
+@interface GestureRecognizerController : BaseViewController<UIGestureRecognizerDelegate>
 
 @end

@@ -11,12 +11,12 @@
 #import "objc/message.h"
 #import "GMSwizzledUtility.h"
 
-static void SwizzlingDelegateIMP(id self, SEL _cmd, id delegate);
-static void (*SystemDelegateIMP)(id self, SEL _cmd, id delegate);
+static void SwizzlingTableDelegateIMP(id self, SEL _cmd, id delegate);
+static void (*SystemTableDelegateIMP)(id self, SEL _cmd, id delegate);
 
-static void SwizzlingDIdSelectRowAtIndexPath(id self  ,SEL _cmd ,id tableView, id indexPath);
+static void SwizzlingTableDidSelectRowAtIndexPath(id self  ,SEL _cmd ,id tableView, id indexPath);
 //用来缓存系统tableView:didSelectRowAtIndexPath:的IMP，置换操作后，SystemSelectRowAtIndexPath的IMP和系统的一样
-static void (*SystemSelectRowAtIndexPath)(id self  ,SEL _cmd ,id tableView, id indexPath);
+static void (*SystemTableSelectRowAtIndexPath)(id self  ,SEL _cmd ,id tableView, id indexPath);
 
 
 @implementation UITableView (Swizzling)
@@ -25,21 +25,24 @@ static void (*SystemSelectRowAtIndexPath)(id self  ,SEL _cmd ,id tableView, id i
 + (void)load {
     
 //    [UITableView swizzlingOriginalSelector:@selector(setDelegate:) swizzledSelector:@selector(gm_setDelegate:)];
-    [GMSwizzledUtility swizzleIMPForClass:[self class] originalSelector:@selector(setDelegate:) swizzledIMP:(IMP)SwizzlingDelegateIMP store:(IMP *)&SystemDelegateIMP];
+    [GMSwizzledUtility swizzleIMPForClass:[self class] originalSelector:@selector(setDelegate:) swizzledIMP:(IMP)SwizzlingTableDelegateIMP store:(IMP *)&SystemTableDelegateIMP];
 
 
 }
 
 
-static void SwizzlingDelegateIMP(id self, SEL _cmd, id delegate) {
-    // do custom work
-    SystemDelegateIMP(self, _cmd, delegate);
-    [GMSwizzledUtility swizzleIMPForClass:[delegate class] originalSelector:@selector(tableView:didSelectRowAtIndexPath:) swizzledIMP:(IMP)SwizzlingDIdSelectRowAtIndexPath store:(IMP *)&SystemSelectRowAtIndexPath];
+static void SwizzlingTableDelegateIMP(id self, SEL _cmd, id delegate) {
+    SystemTableDelegateIMP(self, _cmd, delegate);
+    if([delegate conformsToProtocol:@protocol(UITableViewDelegate)]
+       &&  [delegate respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)]) {
+        NSLog(@"conform UITableViewDelegate Protocol");
+        [GMSwizzledUtility swizzleIMPForClass:[delegate class] originalSelector:@selector(tableView:didSelectRowAtIndexPath:) swizzledIMP:(IMP)SwizzlingTableDidSelectRowAtIndexPath store:(IMP *)&SystemTableSelectRowAtIndexPath];
+    }
 }
 
 
-static void SwizzlingDIdSelectRowAtIndexPath(id self  ,SEL _cmd ,id tableView, id indexPath) {
-    SystemSelectRowAtIndexPath(self,_cmd,tableView,indexPath);
+static void SwizzlingTableDidSelectRowAtIndexPath(id self  ,SEL _cmd ,id tableView, id indexPath) {
+    SystemTableSelectRowAtIndexPath(self,_cmd,tableView,indexPath);
     NSLog(@"gm_didselected");
 }
 
@@ -79,19 +82,18 @@ static void SwizzlingDIdSelectRowAtIndexPath(id self  ,SEL _cmd ,id tableView, i
     
         if([delegate conformsToProtocol:@protocol(UITableViewDelegate)]
            &&  [delegate respondsToSelector:origSelector]) {
-            NSLog(@"conformProtocol");
-        }
-    
-        SEL swizzlSelector = NSSelectorFromString(@"gm_didSelectRowAtIndexPath");
-        /// 避免因为继承问题导致的替换方法错误引起的崩溃.如果被置换的方法在在当前类有实现就返回YES，表示动态添加了一个方法，如果返回NO表示添加失败(b比如已经存在添加过，该方法已经存在)
-        BOOL didAddMethod = class_addMethod(class, swizzlSelector, (IMP)gm_didSelectRowAtIndexPath, method_getTypeEncoding(class_getInstanceMethod(class, origSelector)));
-        Method originalMethod = class_getInstanceMethod(class, origSelector);
-        Method swizzledMethod = class_getInstanceMethod(class, NSSelectorFromString(@"gm_didSelectRowAtIndexPath"));
-        
-        if (didAddMethod) {
-            method_exchangeImplementations(originalMethod, swizzledMethod);
-        }else{
-            class_replaceMethod(class, swizzlSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+            NSLog(@"conform  UITableViewDelegate Protocol");
+            SEL swizzlSelector = NSSelectorFromString(@"gm_didSelectRowAtIndexPath");
+            /// 避免因为继承问题导致的替换方法错误引起的崩溃.如果被置换的方法在在当前类有实现就返回YES，表示动态添加了一个方法，如果返回NO表示添加失败(b比如已经存在添加过，该方法已经存在)
+            BOOL didAddMethod = class_addMethod(class, swizzlSelector, (IMP)gm_didSelectRowAtIndexPath, method_getTypeEncoding(class_getInstanceMethod(class, origSelector)));
+            Method originalMethod = class_getInstanceMethod(class, origSelector);
+            Method swizzledMethod = class_getInstanceMethod(class, NSSelectorFromString(@"gm_didSelectRowAtIndexPath"));
+            
+            if (didAddMethod) {
+                method_exchangeImplementations(originalMethod, swizzledMethod);
+            }else{
+                class_replaceMethod(class, swizzlSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+            }
         }
     }
 }
