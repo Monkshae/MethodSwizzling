@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (MyViewAdditions)
-- (void)my_setFrame:(CGRect)frame;
+//static void MySetFrame(id self, SEL _cmd, CGRect frame);
+
+@interface UIView (Swizzling)
+//- (void)my_viewSetFrame:(CGRect)frame;
+
 @end

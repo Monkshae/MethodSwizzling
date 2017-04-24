@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface UIControl (Swizzling)
-- (BOOL)gm_sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event;
+//- (void)my_controlSetFrame:(CGRect)frame;
+//- (BOOL)gm_sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event;
 @end

@@ -9,6 +9,7 @@
 #import "TableSwizzlingController.h"
 #import "objc/runtime.h"
 #import "SecondViewController.h"
+#import "GMTableView.h"
 @interface TableSwizzlingController  ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
@@ -19,7 +20,7 @@
     [super viewDidLoad];
     
     
-    UITableView *tableView = [[UITableView alloc]init];
+    UITableView *tableView = [[GMTableView alloc]init];
     tableView.rowHeight = 44;
     tableView.delegate = self;
     tableView.dataSource = self;

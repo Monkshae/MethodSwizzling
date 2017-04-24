@@ -6,20 +6,31 @@
 //  Copyright © 2017年 Sean Lee. All rights reserved.
 //
 
-#import "UIView+MyViewAdditions.h"
+#import "UIView+Swizzling.h"
 #import "objc/runtime.h"
 #import "objc/message.h"
+#import "GMSwizzledUtility.h"
 
-@implementation UIView (MyViewAdditions)
+@implementation UIView (Swizzling)
 
-- (void)my_setFrame:(CGRect)frame {
+
+static void (*SetFrameIMP)(id self, SEL _cmd, CGRect frame);
+
+static void MySetFrame(id self, SEL _cmd, CGRect frame) {
     // do custom work
-    [self my_setFrame:frame];
+    NSLog(@"setFrame");
+    SetFrameIMP(self, _cmd, frame);
+}
+
+- (void)my_viewSetFrame:(CGRect)frame {
+    // do custom work
+    [self my_viewSetFrame:frame];
 //    objc_msgSend(self, @selector(my_setFrame:), frame);
 }
 
 + (void)load {
-    [UIView swizzle:@selector(setFrame:) with:@selector(my_setFrame:)];
+    [UIView swizzle:@selector(setFrame:) with:@selector(my_viewSetFrame:)];
+//    [GMSwizzledUtility swizzleIMPForClass:[UIView class] originalSelector:@selector(setFrame:) swizzledIMP:(IMP)MySetFrame originalIMP:(IMP *)&SetFrameIMP];
 }
 
 

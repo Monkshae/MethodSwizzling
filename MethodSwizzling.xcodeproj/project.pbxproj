@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D9387D571EADE24800C45C79 /* GMTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9387D561EADE24800C45C79 /* GMTableView.m */; };
+		D9387D5A1EADE66D00C45C79 /* GMSwizzledUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = D9387D591EADE66D00C45C79 /* GMSwizzledUtility.m */; };
 		D93ECEB51C85756500663946 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D93ECEB41C85756500663946 /* ThirdViewController.m */; };
 		D93ECEB81C8579C000663946 /* TableSwizzlingController.m in Sources */ = {isa = PBXBuildFile; fileRef = D93ECEB71C8579C000663946 /* TableSwizzlingController.m */; };
 		D93ECEC11C85AE2100663946 /* UIApplication+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = D93ECEC01C85AE2100663946 /* UIApplication+Swizzling.m */; };
@@ -18,7 +20,7 @@
 		D93ECEF31C89340000663946 /* JPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = D93ECEF11C89340000663946 /* JPEngine.m */; };
 		D93ECEF41C89340000663946 /* JSPatch.js in Resources */ = {isa = PBXBuildFile; fileRef = D93ECEF21C89340000663946 /* JSPatch.js */; };
 		D9A79B711EA9F9E7008F38E0 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A79B701EA9F9E7008F38E0 /* MainViewController.m */; };
-		D9A79B741EAA16F5008F38E0 /* UIView+MyViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A79B731EAA16F5008F38E0 /* UIView+MyViewAdditions.m */; };
+		D9A79B741EAA16F5008F38E0 /* UIView+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A79B731EAA16F5008F38E0 /* UIView+Swizzling.m */; };
 		D9A79B771EAA2F7C008F38E0 /* FrameController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A79B761EAA2F7C008F38E0 /* FrameController.m */; };
 		D9CB58BE1C7D9464004FBD98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CB58BD1C7D9464004FBD98 /* main.m */; };
 		D9CB58C11C7D9464004FBD98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CB58C01C7D9464004FBD98 /* AppDelegate.m */; };
@@ -29,6 +31,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D9387D551EADE24800C45C79 /* GMTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMTableView.h; sourceTree = "<group>"; };
+		D9387D561EADE24800C45C79 /* GMTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMTableView.m; sourceTree = "<group>"; };
+		D9387D581EADE66D00C45C79 /* GMSwizzledUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMSwizzledUtility.h; sourceTree = "<group>"; };
+		D9387D591EADE66D00C45C79 /* GMSwizzledUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMSwizzledUtility.m; sourceTree = "<group>"; };
 		D93ECEB31C85756500663946 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		D93ECEB41C85756500663946 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		D93ECEB61C8579C000663946 /* TableSwizzlingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableSwizzlingController.h; sourceTree = "<group>"; };
@@ -50,8 +56,8 @@
 		D93ECEF21C89340000663946 /* JSPatch.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = JSPatch.js; sourceTree = "<group>"; };
 		D9A79B6F1EA9F9E7008F38E0 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		D9A79B701EA9F9E7008F38E0 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		D9A79B721EAA16F5008F38E0 /* UIView+MyViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MyViewAdditions.h"; sourceTree = "<group>"; };
-		D9A79B731EAA16F5008F38E0 /* UIView+MyViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MyViewAdditions.m"; sourceTree = "<group>"; };
+		D9A79B721EAA16F5008F38E0 /* UIView+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Swizzling.h"; sourceTree = "<group>"; };
+		D9A79B731EAA16F5008F38E0 /* UIView+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Swizzling.m"; sourceTree = "<group>"; };
 		D9A79B751EAA2F7C008F38E0 /* FrameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameController.h; sourceTree = "<group>"; };
 		D9A79B761EAA2F7C008F38E0 /* FrameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameController.m; sourceTree = "<group>"; };
 		D9CB58B91C7D9464004FBD98 /* MethodSwizzling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MethodSwizzling.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,14 +133,18 @@
 				D93ECEC91C86D11500663946 /* UIResponder+Swizzling.m */,
 				D93ECEC51C86A99600663946 /* UIWindow+Swizzling.h */,
 				D93ECEC61C86A99600663946 /* UIWindow+Swizzling.m */,
-				D93ECED71C88148300663946 /* UIControl+Swizzling.h */,
-				D93ECED81C88148300663946 /* UIControl+Swizzling.m */,
 				D93ECEC21C8690AD00663946 /* UIGestureRecognizer+Swizzling.h */,
 				D93ECEC31C8690AD00663946 /* UIGestureRecognizer+Swizzling.m */,
 				D93ECEE61C881AC100663946 /* UITableView+Swizzling.h */,
 				D93ECEE71C881AC100663946 /* UITableView+Swizzling.m */,
-				D9A79B721EAA16F5008F38E0 /* UIView+MyViewAdditions.h */,
-				D9A79B731EAA16F5008F38E0 /* UIView+MyViewAdditions.m */,
+				D9387D551EADE24800C45C79 /* GMTableView.h */,
+				D9387D561EADE24800C45C79 /* GMTableView.m */,
+				D9387D581EADE66D00C45C79 /* GMSwizzledUtility.h */,
+				D9387D591EADE66D00C45C79 /* GMSwizzledUtility.m */,
+				D93ECED71C88148300663946 /* UIControl+Swizzling.h */,
+				D93ECED81C88148300663946 /* UIControl+Swizzling.m */,
+				D9A79B721EAA16F5008F38E0 /* UIView+Swizzling.h */,
+				D9A79B731EAA16F5008F38E0 /* UIView+Swizzling.m */,
 				D93ECEEF1C89340000663946 /* JSPatch */,
 				D9CB58C81C7D9464004FBD98 /* Assets.xcassets */,
 				D9CB58CA1C7D9464004FBD98 /* LaunchScreen.storyboard */,
@@ -224,6 +234,8 @@
 			files = (
 				D93ECEC41C8690AD00663946 /* UIGestureRecognizer+Swizzling.m in Sources */,
 				D93ECEB81C8579C000663946 /* TableSwizzlingController.m in Sources */,
+				D9387D5A1EADE66D00C45C79 /* GMSwizzledUtility.m in Sources */,
+				D9387D571EADE24800C45C79 /* GMTableView.m in Sources */,
 				D9CB58DB1C7DC273004FBD98 /* SecondViewController.m in Sources */,
 				D93ECECA1C86D11500663946 /* UIResponder+Swizzling.m in Sources */,
 				D93ECEF31C89340000663946 /* JPEngine.m in Sources */,
@@ -236,7 +248,7 @@
 				D9A79B771EAA2F7C008F38E0 /* FrameController.m in Sources */,
 				D9A79B711EA9F9E7008F38E0 /* MainViewController.m in Sources */,
 				D9CB58C11C7D9464004FBD98 /* AppDelegate.m in Sources */,
-				D9A79B741EAA16F5008F38E0 /* UIView+MyViewAdditions.m in Sources */,
+				D9A79B741EAA16F5008F38E0 /* UIView+Swizzling.m in Sources */,
 				D9CB58BE1C7D9464004FBD98 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
