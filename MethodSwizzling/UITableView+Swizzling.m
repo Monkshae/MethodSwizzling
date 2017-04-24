@@ -11,35 +11,35 @@
 #import "objc/message.h"
 #import "GMSwizzledUtility.h"
 
-static void MySetDelegateIMP(id self, SEL _cmd, id delegate);
-static void (*SetDelegateIMP)(id self, SEL _cmd, id delegate);
+static void SwizzlingDelegateIMP(id self, SEL _cmd, id delegate);
+static void (*SystemDelegateIMP)(id self, SEL _cmd, id delegate);
 
-static void MyGMDIdSelectRowAtIndexPath(id self  ,SEL _cmd ,id tableView, id indexPath);
-static void (*GMDidSelectRowAtIndexPath)(id self  ,SEL _cmd ,id tableView, id indexPath);
+static void SwizzlingDIdSelectRowAtIndexPath(id self  ,SEL _cmd ,id tableView, id indexPath);
+//用来缓存系统tableView:didSelectRowAtIndexPath:的IMP，置换操作后，SystemSelectRowAtIndexPath的IMP和系统的一样
+static void (*SystemSelectRowAtIndexPath)(id self  ,SEL _cmd ,id tableView, id indexPath);
 
 
 @implementation UITableView (Swizzling)
 
 
-
 + (void)load {
     
 //    [UITableView swizzlingOriginalSelector:@selector(setDelegate:) swizzledSelector:@selector(gm_setDelegate:)];
-    [GMSwizzledUtility swizzleIMPForClass:[self class] originalSelector:@selector(setDelegate:) swizzledIMP:(IMP)MySetDelegateIMP store:(IMP *)&SetDelegateIMP];
+    [GMSwizzledUtility swizzleIMPForClass:[self class] originalSelector:@selector(setDelegate:) swizzledIMP:(IMP)SwizzlingDelegateIMP store:(IMP *)&SystemDelegateIMP];
 
 
 }
 
 
-static void MySetDelegateIMP(id self, SEL _cmd, id delegate) {
+static void SwizzlingDelegateIMP(id self, SEL _cmd, id delegate) {
     // do custom work
-    SetDelegateIMP(self, _cmd, delegate);
-    [GMSwizzledUtility swizzleIMPForClass:[delegate class] originalSelector:@selector(tableView:didSelectRowAtIndexPath:) swizzledIMP:(IMP)MyGMDIdSelectRowAtIndexPath store:(IMP *)&GMDidSelectRowAtIndexPath];
+    SystemDelegateIMP(self, _cmd, delegate);
+    [GMSwizzledUtility swizzleIMPForClass:[delegate class] originalSelector:@selector(tableView:didSelectRowAtIndexPath:) swizzledIMP:(IMP)SwizzlingDIdSelectRowAtIndexPath store:(IMP *)&SystemSelectRowAtIndexPath];
 }
 
 
-static void MyGMDIdSelectRowAtIndexPath(id self  ,SEL _cmd ,id tableView, id indexPath) {
-    GMDidSelectRowAtIndexPath(self,_cmd,tableView,indexPath);
+static void SwizzlingDIdSelectRowAtIndexPath(id self  ,SEL _cmd ,id tableView, id indexPath) {
+    SystemSelectRowAtIndexPath(self,_cmd,tableView,indexPath);
     NSLog(@"gm_didselected");
 }
 

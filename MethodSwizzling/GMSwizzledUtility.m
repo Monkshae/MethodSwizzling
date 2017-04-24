@@ -67,6 +67,7 @@
         }
     }
     //每次置换完成，我们保存原系统方法的实现
+    //typedef IMP *IMPPointer;这句话看似很多余，其实是因为imp本身是一个无返回值的指针，所以为了保存原系统的imp不能通过直接赋值，需要再嵌套一层指针
     if (imp && store) { *store = imp;}
     return (imp != NULL);
 }
