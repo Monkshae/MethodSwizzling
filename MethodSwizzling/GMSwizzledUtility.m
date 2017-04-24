@@ -54,18 +54,20 @@
   交换IMP
  http://stackoverflow.com/questions/5339276/what-are-the-dangers-of-method-swizzling-in-objective-c
  */
-+ (BOOL)swizzleIMPForClass:(Class)class originalSelector:(SEL) originalSelector swizzledIMP:(IMP)swizzledIMP originalIMP:(IMPPointer)originalIMP{
++ (BOOL)swizzleIMPForClass:(Class)class originalSelector:(SEL) originalSelector swizzledIMP:(IMP)swizzledIMP store:(IMPPointer)store{
     IMP imp = NULL;
     Method method = class_getInstanceMethod(class, originalSelector);
     if (method) {
         const char *type = method_getTypeEncoding(method);
+        //imp原系统方法实现的IMP
         imp = class_replaceMethod(class, originalSelector, swizzledIMP, type);
-        //imp为NULL表示执行的是class_addMethod，不为空执行的是method_setImplementation
+        //为NULL表示执行的是class_addMethod，不为空执行的是method_setImplementation
         if (!imp) {
             imp = method_getImplementation(method);
         }
     }
-    if (imp && originalIMP) { *originalIMP = imp;}
+    //每次置换完成，我们保存原系统方法的实现
+    if (imp && store) { *store = imp;}
     return (imp != NULL);
 }
 

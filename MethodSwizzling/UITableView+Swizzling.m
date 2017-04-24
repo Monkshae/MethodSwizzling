@@ -25,7 +25,7 @@ static void (*GMDidSelectRowAtIndexPath)(id self  ,SEL _cmd ,id tableView, id in
 + (void)load {
     
 //    [UITableView swizzlingOriginalSelector:@selector(setDelegate:) swizzledSelector:@selector(gm_setDelegate:)];
-    [GMSwizzledUtility swizzleIMPForClass:[self class] originalSelector:@selector(setDelegate:) swizzledIMP:(IMP)MySetDelegateIMP originalIMP:(IMP *)&SetDelegateIMP];
+    [GMSwizzledUtility swizzleIMPForClass:[self class] originalSelector:@selector(setDelegate:) swizzledIMP:(IMP)MySetDelegateIMP store:(IMP *)&SetDelegateIMP];
 
 
 }
@@ -34,13 +34,7 @@ static void (*GMDidSelectRowAtIndexPath)(id self  ,SEL _cmd ,id tableView, id in
 static void MySetDelegateIMP(id self, SEL _cmd, id delegate) {
     // do custom work
     SetDelegateIMP(self, _cmd, delegate);
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        [GMSwizzledUtility swizzleIMPForClass:[delegate class] originalSelector:@selector(tableView:didSelectRowAtIndexPath:) swizzledIMP:(IMP)MyGMDIdSelectRowAtIndexPath originalIMP:(IMP *)&GMDidSelectRowAtIndexPath];
-
-    });
-
-
+    [GMSwizzledUtility swizzleIMPForClass:[delegate class] originalSelector:@selector(tableView:didSelectRowAtIndexPath:) swizzledIMP:(IMP)MyGMDIdSelectRowAtIndexPath store:(IMP *)&GMDidSelectRowAtIndexPath];
 }
 
 
