@@ -8,7 +8,6 @@
 
 #import "ButtonSwizzlingController.h"
 #import "objc/runtime.h"
-#import "SecondViewController.h"
 #import "ThirdViewController.h"
 #import "TableSwizzlingController.h"
 #import "UIControl+Swizzling.h"

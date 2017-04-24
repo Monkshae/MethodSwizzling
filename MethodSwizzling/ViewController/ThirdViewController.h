@@ -6,8 +6,8 @@
 //  Copyright © 2016年 Sean Lee. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "BaseViewController.h"
 
-@interface ThirdViewController : SecondViewController
+@interface ThirdViewController : BaseViewController
 
 @end

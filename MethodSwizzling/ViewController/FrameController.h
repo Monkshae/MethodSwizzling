@@ -6,8 +6,8 @@
 //  Copyright © 2017年 Sean Lee. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface FrameController : UIViewController
+@interface FrameController : BaseViewController
 
 @end

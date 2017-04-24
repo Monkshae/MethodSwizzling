@@ -22,6 +22,7 @@
 		D958CCF51EAE122700CFB4A2 /* UITableView+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = D958CCEC1EAE122700CFB4A2 /* UITableView+Swizzling.m */; };
 		D958CCF61EAE122700CFB4A2 /* UIView+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = D958CCEE1EAE122700CFB4A2 /* UIView+Swizzling.m */; };
 		D958CCF71EAE122700CFB4A2 /* UIWindow+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = D958CCF01EAE122700CFB4A2 /* UIWindow+Swizzling.m */; };
+		D958CCFA1EAE12BF00CFB4A2 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D958CCF91EAE12BF00CFB4A2 /* BaseViewController.m */; };
 		D9CB58BE1C7D9464004FBD98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CB58BD1C7D9464004FBD98 /* main.m */; };
 		D9CB58C11C7D9464004FBD98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CB58C01C7D9464004FBD98 /* AppDelegate.m */; };
 		D9CB58C91C7D9464004FBD98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9CB58C81C7D9464004FBD98 /* Assets.xcassets */; };
@@ -59,6 +60,8 @@
 		D958CCEE1EAE122700CFB4A2 /* UIView+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Swizzling.m"; sourceTree = "<group>"; };
 		D958CCEF1EAE122700CFB4A2 /* UIWindow+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Swizzling.h"; sourceTree = "<group>"; };
 		D958CCF01EAE122700CFB4A2 /* UIWindow+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Swizzling.m"; sourceTree = "<group>"; };
+		D958CCF81EAE12BF00CFB4A2 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		D958CCF91EAE12BF00CFB4A2 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		D9CB58B91C7D9464004FBD98 /* MethodSwizzling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MethodSwizzling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9CB58BD1C7D9464004FBD98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D9CB58BF1C7D9464004FBD98 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -94,6 +97,8 @@
 				D958CCD91EAE121D00CFB4A2 /* TableSwizzlingController.m */,
 				D958CCDA1EAE121D00CFB4A2 /* ThirdViewController.h */,
 				D958CCDB1EAE121D00CFB4A2 /* ThirdViewController.m */,
+				D958CCF81EAE12BF00CFB4A2 /* BaseViewController.h */,
+				D958CCF91EAE12BF00CFB4A2 /* BaseViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -232,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D958CCF11EAE122700CFB4A2 /* UIApplication+Swizzling.m in Sources */,
+				D958CCFA1EAE12BF00CFB4A2 /* BaseViewController.m in Sources */,
 				D958CCE11EAE121D00CFB4A2 /* ThirdViewController.m in Sources */,
 				D9387D5A1EADE66D00C45C79 /* GMSwizzledUtility.m in Sources */,
 				D958CCF51EAE122700CFB4A2 /* UITableView+Swizzling.m in Sources */,

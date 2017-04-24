@@ -10,7 +10,7 @@
 #import "TableSwizzlingController.h"
 #import "FrameController.h"
 #import "GestureRecognizerController.h"
-
+#import "ButtonSwizzlingController.h"
 @interface MainViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) NSArray * dataArray;
 @end

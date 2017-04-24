@@ -8,7 +8,6 @@
 
 #import "TableSwizzlingController.h"
 #import "objc/runtime.h"
-#import "SecondViewController.h"
 #import "GMTableView.h"
 @interface TableSwizzlingController  ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -44,8 +43,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"didSelected");
-    SecondViewController *controler = [[SecondViewController alloc]init];
-    [self.navigationController pushViewController:controler animated:YES];
 }
 
 @end

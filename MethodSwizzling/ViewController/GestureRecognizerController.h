@@ -6,9 +6,8 @@
 //  Copyright © 2016年 Sean Lee. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "ButtonSwizzlingController.h"
+#import "BaseViewController.h"
 
-@interface GestureRecognizerController : ButtonSwizzlingController
+@interface GestureRecognizerController : BaseViewController
 
 @end
