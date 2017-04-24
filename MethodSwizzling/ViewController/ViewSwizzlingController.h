@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface FrameController : BaseViewController
+@interface ViewSwizzlingController : BaseViewController
 
 @end

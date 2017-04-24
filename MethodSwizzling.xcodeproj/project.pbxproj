@@ -10,7 +10,7 @@
 		D9387D571EADE24800C45C79 /* GMTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9387D561EADE24800C45C79 /* GMTableView.m */; };
 		D9387D5A1EADE66D00C45C79 /* GMSwizzledUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = D9387D591EADE66D00C45C79 /* GMSwizzledUtility.m */; };
 		D958CCDC1EAE121D00CFB4A2 /* ButtonSwizzlingController.m in Sources */ = {isa = PBXBuildFile; fileRef = D958CCD11EAE121D00CFB4A2 /* ButtonSwizzlingController.m */; };
-		D958CCDD1EAE121D00CFB4A2 /* FrameController.m in Sources */ = {isa = PBXBuildFile; fileRef = D958CCD31EAE121D00CFB4A2 /* FrameController.m */; };
+		D958CCDD1EAE121D00CFB4A2 /* ViewSwizzlingController.m in Sources */ = {isa = PBXBuildFile; fileRef = D958CCD31EAE121D00CFB4A2 /* ViewSwizzlingController.m */; };
 		D958CCDE1EAE121D00CFB4A2 /* GestureRecognizerController.m in Sources */ = {isa = PBXBuildFile; fileRef = D958CCD51EAE121D00CFB4A2 /* GestureRecognizerController.m */; };
 		D958CCDF1EAE121D00CFB4A2 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D958CCD71EAE121D00CFB4A2 /* MainViewController.m */; };
 		D958CCE01EAE121D00CFB4A2 /* TableSwizzlingController.m in Sources */ = {isa = PBXBuildFile; fileRef = D958CCD91EAE121D00CFB4A2 /* TableSwizzlingController.m */; };
@@ -36,8 +36,8 @@
 		D9387D591EADE66D00C45C79 /* GMSwizzledUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMSwizzledUtility.m; sourceTree = "<group>"; };
 		D958CCD01EAE121D00CFB4A2 /* ButtonSwizzlingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonSwizzlingController.h; sourceTree = "<group>"; };
 		D958CCD11EAE121D00CFB4A2 /* ButtonSwizzlingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonSwizzlingController.m; sourceTree = "<group>"; };
-		D958CCD21EAE121D00CFB4A2 /* FrameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameController.h; sourceTree = "<group>"; };
-		D958CCD31EAE121D00CFB4A2 /* FrameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameController.m; sourceTree = "<group>"; };
+		D958CCD21EAE121D00CFB4A2 /* ViewSwizzlingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewSwizzlingController.h; sourceTree = "<group>"; };
+		D958CCD31EAE121D00CFB4A2 /* ViewSwizzlingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewSwizzlingController.m; sourceTree = "<group>"; };
 		D958CCD41EAE121D00CFB4A2 /* GestureRecognizerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureRecognizerController.h; sourceTree = "<group>"; };
 		D958CCD51EAE121D00CFB4A2 /* GestureRecognizerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureRecognizerController.m; sourceTree = "<group>"; };
 		D958CCD61EAE121D00CFB4A2 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -85,16 +85,16 @@
 		D958CCCF1EAE121D00CFB4A2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				D958CCD01EAE121D00CFB4A2 /* ButtonSwizzlingController.h */,
-				D958CCD11EAE121D00CFB4A2 /* ButtonSwizzlingController.m */,
-				D958CCD21EAE121D00CFB4A2 /* FrameController.h */,
-				D958CCD31EAE121D00CFB4A2 /* FrameController.m */,
-				D958CCD41EAE121D00CFB4A2 /* GestureRecognizerController.h */,
-				D958CCD51EAE121D00CFB4A2 /* GestureRecognizerController.m */,
 				D958CCD61EAE121D00CFB4A2 /* MainViewController.h */,
 				D958CCD71EAE121D00CFB4A2 /* MainViewController.m */,
 				D958CCD81EAE121D00CFB4A2 /* TableSwizzlingController.h */,
 				D958CCD91EAE121D00CFB4A2 /* TableSwizzlingController.m */,
+				D958CCD01EAE121D00CFB4A2 /* ButtonSwizzlingController.h */,
+				D958CCD11EAE121D00CFB4A2 /* ButtonSwizzlingController.m */,
+				D958CCD21EAE121D00CFB4A2 /* ViewSwizzlingController.h */,
+				D958CCD31EAE121D00CFB4A2 /* ViewSwizzlingController.m */,
+				D958CCD41EAE121D00CFB4A2 /* GestureRecognizerController.h */,
+				D958CCD51EAE121D00CFB4A2 /* GestureRecognizerController.m */,
 				D958CCDA1EAE121D00CFB4A2 /* ThirdViewController.h */,
 				D958CCDB1EAE121D00CFB4A2 /* ThirdViewController.m */,
 				D958CCF81EAE12BF00CFB4A2 /* BaseViewController.h */,
@@ -245,7 +245,7 @@
 				D958CCDE1EAE121D00CFB4A2 /* GestureRecognizerController.m in Sources */,
 				D9387D571EADE24800C45C79 /* GMTableView.m in Sources */,
 				D958CCF31EAE122700CFB4A2 /* UIGestureRecognizer+Swizzling.m in Sources */,
-				D958CCDD1EAE121D00CFB4A2 /* FrameController.m in Sources */,
+				D958CCDD1EAE121D00CFB4A2 /* ViewSwizzlingController.m in Sources */,
 				D958CCF71EAE122700CFB4A2 /* UIWindow+Swizzling.m in Sources */,
 				D958CCDF1EAE121D00CFB4A2 /* MainViewController.m in Sources */,
 				D958CCE01EAE121D00CFB4A2 /* TableSwizzlingController.m in Sources */,

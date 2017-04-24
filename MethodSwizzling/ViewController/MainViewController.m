@@ -8,7 +8,7 @@
 
 #import "MainViewController.h"
 #import "TableSwizzlingController.h"
-#import "FrameController.h"
+#import "ViewSwizzlingController.h"
 #import "GestureRecognizerController.h"
 #import "ButtonSwizzlingController.h"
 @interface MainViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -56,7 +56,7 @@
             controler = [[ButtonSwizzlingController alloc]init];
             break;
         case 2:
-            controler = [[FrameController alloc]init];
+            controler = [[ViewSwizzlingController alloc]init];
             break;
         case 3:
             controler = [[GestureRecognizerController alloc]init];

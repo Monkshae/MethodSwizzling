@@ -6,14 +6,14 @@
 //  Copyright © 2017年 Sean Lee. All rights reserved.
 //
 
-#import "FrameController.h"
+#import "ViewSwizzlingController.h"
 #import "UIView+Swizzling.h"
 #import "UIControl+Swizzling.h"
-@interface FrameController ()
+@interface ViewSwizzlingController ()
 
 @end
 
-@implementation FrameController
+@implementation ViewSwizzlingController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
