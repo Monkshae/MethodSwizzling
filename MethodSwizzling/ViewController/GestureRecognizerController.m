@@ -6,18 +6,10 @@
 //  Copyright © 2016年 Sean Lee. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "GestureRecognizerController.h"
 #import "objc/runtime.h"
 
-@implementation SecondViewController
-
-+ (void)load{
-    
-//    Method originalMethod = class_getInstanceMethod([self class], @selector(viewWillAppear:));
-//    Method swizzledMethod = class_getInstanceMethod([self class], @selector(lc_viewWillAppear:));
-//    method_exchangeImplementations(originalMethod, swizzledMethod);
-    
-}
+@implementation GestureRecognizerController
 
 
 - (void)viewDidLoad{

@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "TableSwizzlingController.h"
 #import "FrameController.h"
+#import "GestureRecognizerController.h"
 
 @interface MainViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) NSArray * dataArray;
@@ -28,9 +29,7 @@
     tableView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
     [self.view addSubview:tableView];
     
-    _dataArray = @[@"TableSwizzling",@"ButtonSwizzling",@"ViewSwizzling"];
-    
-    //@"TapSwizzling"
+    _dataArray = @[@"TableSwizzling",@"ButtonSwizzling",@"ViewSwizzling",@"gestureRecognizerSwizzling"];
     
 }
 
@@ -56,8 +55,13 @@
         case 1:
             controler = [[ButtonSwizzlingController alloc]init];
             break;
-        default:
+        case 2:
             controler = [[FrameController alloc]init];
+            break;
+        case 3:
+            controler = [[GestureRecognizerController alloc]init];
+            break;
+        default:
             break;
     }
     [self.navigationController pushViewController:controler animated:YES];

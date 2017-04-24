@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "ButtonSwizzlingController.h"
 
-@interface SecondViewController : ButtonSwizzlingController
+@interface GestureRecognizerController : ButtonSwizzlingController
 
 @end
