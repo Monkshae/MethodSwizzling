@@ -39,7 +39,6 @@ static void SwizzlingGestureDelegateIMP(id self, SEL _cmd, id delegate) {
        &&  [delegate respondsToSelector:@selector(gestureRecognizerShouldBegin:)]) {
         NSLog(@"conform  UIGestureRecognizerDelegate Protocol");
         [GMSwizzledUtility swizzleIMPForClass:[delegate class] originalSelector:@selector(gestureRecognizerShouldBegin:) swizzledIMP:(IMP)SwizzlingGestureRecognizerShouldBeginIMP store:(IMP *)&SystemRecognizerShouldBeginIMP];
-
     }
 }
 

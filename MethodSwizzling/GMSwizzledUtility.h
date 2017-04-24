@@ -12,9 +12,6 @@ typedef IMP *IMPPointer;
 
 @interface GMSwizzledUtility : NSObject
 
-+ (void)replaceIMPOfOriginalSelector:(SEL)originalSelector swizzledSelector:(SEL)swizzledSelector onClass:(Class)class withBlock:(id)block;
-
-+ (void)exchangeIMPForClass:(Class)class originalSelector:(SEL)originalSelector swizzledSelector:(SEL)swizzledSelector;
 + (BOOL)swizzleIMPForClass:(Class)class originalSelector:(SEL) originalSelector swizzledIMP:(IMP)swizzledIMP store:(IMPPointer)store;
 + (SEL)swizzledSelectorForSelector:(SEL)selector;
 
