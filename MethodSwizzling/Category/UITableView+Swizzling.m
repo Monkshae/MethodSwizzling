@@ -10,6 +10,7 @@
 #import "objc/runtime.h"
 #import "objc/message.h"
 #import "GMSwizzledUtility.h"
+#import "GMSwizzliedManager.h"
 
 static void SwizzlingTableDelegateIMP(id self, SEL _cmd, id delegate);
 static void (*SystemTableDelegateIMP)(id self, SEL _cmd, id delegate);
@@ -43,6 +44,8 @@ static void SwizzlingTableDelegateIMP(id self, SEL _cmd, id delegate) {
 
 static void SwizzlingTableDidSelectRowAtIndexPath(id self  ,SEL _cmd ,id tableView, id indexPath) {
     SystemTableSelectRowAtIndexPath(self,_cmd,tableView,indexPath);
+    UIViewController * contrller = [[GMSwizzliedManager shareManager] getCurrentController];
+    NSDictionary *attributes = [contrller valueForKey:@"attributesaaa"];
     NSLog(@"gm_didselected");
 }
 

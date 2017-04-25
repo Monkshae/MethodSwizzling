@@ -24,6 +24,7 @@
 		D958CCF71EAE122700CFB4A2 /* UIWindow+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = D958CCF01EAE122700CFB4A2 /* UIWindow+Swizzling.m */; };
 		D958CCFA1EAE12BF00CFB4A2 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D958CCF91EAE12BF00CFB4A2 /* BaseViewController.m */; };
 		D958CCFD1EAE1A1500CFB4A2 /* GMSwizzliedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D958CCFC1EAE1A1500CFB4A2 /* GMSwizzliedManager.m */; };
+		D958CD001EAE264C00CFB4A2 /* NSObject+KVCExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D958CCFF1EAE264C00CFB4A2 /* NSObject+KVCExceptionHandler.m */; };
 		D9CB58BE1C7D9464004FBD98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CB58BD1C7D9464004FBD98 /* main.m */; };
 		D9CB58C11C7D9464004FBD98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9CB58C01C7D9464004FBD98 /* AppDelegate.m */; };
 		D9CB58C91C7D9464004FBD98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9CB58C81C7D9464004FBD98 /* Assets.xcassets */; };
@@ -65,6 +66,8 @@
 		D958CCF91EAE12BF00CFB4A2 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		D958CCFB1EAE1A1500CFB4A2 /* GMSwizzliedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMSwizzliedManager.h; sourceTree = "<group>"; };
 		D958CCFC1EAE1A1500CFB4A2 /* GMSwizzliedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMSwizzliedManager.m; sourceTree = "<group>"; };
+		D958CCFE1EAE264C00CFB4A2 /* NSObject+KVCExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVCExceptionHandler.h"; sourceTree = "<group>"; };
+		D958CCFF1EAE264C00CFB4A2 /* NSObject+KVCExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVCExceptionHandler.m"; sourceTree = "<group>"; };
 		D9CB58B91C7D9464004FBD98 /* MethodSwizzling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MethodSwizzling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9CB58BD1C7D9464004FBD98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D9CB58BF1C7D9464004FBD98 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -109,6 +112,8 @@
 		D958CCE21EAE122700CFB4A2 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				D958CCFE1EAE264C00CFB4A2 /* NSObject+KVCExceptionHandler.h */,
+				D958CCFF1EAE264C00CFB4A2 /* NSObject+KVCExceptionHandler.m */,
 				D958CCE31EAE122700CFB4A2 /* UIApplication+Swizzling.h */,
 				D958CCE41EAE122700CFB4A2 /* UIApplication+Swizzling.m */,
 				D958CCEB1EAE122700CFB4A2 /* UITableView+Swizzling.h */,
@@ -246,6 +251,7 @@
 				D958CCE11EAE121D00CFB4A2 /* ThirdViewController.m in Sources */,
 				D9387D5A1EADE66D00C45C79 /* GMSwizzledUtility.m in Sources */,
 				D958CCF51EAE122700CFB4A2 /* UITableView+Swizzling.m in Sources */,
+				D958CD001EAE264C00CFB4A2 /* NSObject+KVCExceptionHandler.m in Sources */,
 				D958CCDC1EAE121D00CFB4A2 /* ButtonSwizzlingController.m in Sources */,
 				D958CCDE1EAE121D00CFB4A2 /* GestureRecognizerController.m in Sources */,
 				D9387D571EADE24800C45C79 /* GMTableView.m in Sources */,

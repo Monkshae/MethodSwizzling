@@ -42,6 +42,7 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    _attributes = @{@"tyep":@"tableView",@"pageName":@"测试"};
     NSLog(@"didSelected");
 }
 

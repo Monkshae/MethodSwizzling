@@ -6,10 +6,12 @@
 //  Copyright © 2017年 Sean Lee. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface GMSwizzliedManager : NSObject
 
 + (instancetype)shareManager;
+
+- (UIViewController *)getCurrentController;
 
 @end

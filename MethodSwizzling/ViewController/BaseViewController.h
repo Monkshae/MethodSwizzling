@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BaseViewController : UIViewController
+@interface BaseViewController : UIViewController{
+    NSDictionary *_attributes;
+}
 
 @end
