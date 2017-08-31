@@ -25,10 +25,7 @@ static void (*SystemTableSelectRowAtIndexPath)(id self  ,SEL _cmd ,id tableView,
 
 + (void)load {
     
-//    [UITableView swizzlingOriginalSelector:@selector(setDelegate:) swizzledSelector:@selector(gm_setDelegate:)];
     [GMSwizzledUtility swizzleIMPForClass:[self class] originalSelector:@selector(setDelegate:) swizzledIMP:(IMP)SwizzlingTableDelegateIMP store:(IMP *)&SystemTableDelegateIMP];
-
-
 }
 
 
@@ -46,7 +43,7 @@ static void SwizzlingTableDidSelectRowAtIndexPath(id self  ,SEL _cmd ,id tableVi
     SystemTableSelectRowAtIndexPath(self,_cmd,tableView,indexPath);
     UIViewController * contrller = [[GMSwizzliedManager shareManager] getCurrentController];
     NSDictionary *attributes = [contrller valueForKey:@"attributesaaa"];
-    NSLog(@"gm_didselected");
+    NSLog(@"methodSwizzling_didselected & attributes = %@",attributes);
 }
 
 

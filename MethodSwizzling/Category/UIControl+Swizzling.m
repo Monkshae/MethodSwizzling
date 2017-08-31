@@ -19,8 +19,8 @@
 }
 
 + (void)load {
-    [UIControl swizzlingOriginalSelector:@selector(sendAction:to:forEvent:) swizzledSelector:@selector(gm_sendAction:to:forEvent:)];
-    [UIControl swizzle:@selector(setFrame:) with:@selector(my_controlSetFrame:)];
+//    [UIControl swizzlingOriginalSelector:@selector(sendAction:to:forEvent:) swizzledSelector:@selector(gm_sendAction:to:forEvent:)];
+//    [UIControl swizzle:@selector(setFrame:) with:@selector(my_controlSetFrame:)];
 }
 
 

@@ -29,7 +29,7 @@ static void MySetFrame(id self, SEL _cmd, CGRect frame) {
 }
 
 + (void)load {
-    [UIView swizzle:@selector(setFrame:) with:@selector(my_viewSetFrame:)];
+//    [UIView swizzle:@selector(setFrame:) with:@selector(my_viewSetFrame:)];
 //    [GMSwizzledUtility swizzleIMPForClass:[UIView class] originalSelector:@selector(setFrame:) swizzledIMP:(IMP)MySetFrame originalIMP:(IMP *)&SetFrameIMP];
 }
 

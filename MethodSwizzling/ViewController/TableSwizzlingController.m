@@ -17,8 +17,6 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    
-    
     UITableView *tableView = [[GMTableView alloc]init];
     tableView.rowHeight = 44;
     tableView.delegate = self;
@@ -27,6 +25,7 @@
     tableView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
     [self.view addSubview:tableView];
     
+    self.attributes = @{@"tableKey" : @"tableValue"};
 }
 
 
@@ -42,8 +41,7 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    _attributes = @{@"tyep":@"tableView",@"pageName":@"测试"};
-    NSLog(@"didSelected");
+    NSLog(@"original function  didSelected!");
 }
 
 @end
